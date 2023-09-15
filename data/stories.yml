@@ -29,15 +29,28 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: path about time
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: give_time
-  - action: action_show_time
+# - story: path about time
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: give_time
+#   - action: action_show_time
+
 - story: interactive_story_1
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: give_time
-  - action: action_show_time
+  - intent: ask_me_anything
+  - action: shirt_size_form
+  - active_loop: shirt_size_form
+  - slot_was_set:
+    - requested_slot: shirt_size
+  - intent: give_shirt_size
+    entities:
+    - shirt_size: medium
+  - slot_was_set:
+    - shirt_size: medium
+  - action: shirt_size_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_remember
+  - action: action_say_shirt_size
