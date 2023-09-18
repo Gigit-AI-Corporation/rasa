@@ -116,4 +116,3 @@ nlu:
     - give shirt size
     - i want a [large](shirt_size) shirt please
     - i want to give you my shirt
-    - [medium](shirt_size)
