@@ -19,6 +19,14 @@ pip3 install 'rasa[spacy]'
 python3 -m spacy download en_core_web_md
 ```
 
+## Unintall uvloop for bug in Rasa interactive
+
+When chatting with bot to trigger external reminder and get Error: EXTERNAL_reminder error Future exception was never retrieved future: <Future finished exception=BlockingIOError(35, 'write could not complete without blocking', 0)>
+
+```bash
+pip uninstall uvloop
+```
+
 TODO:
 
 1. edit external trigger to activate a reminder instead of custom action
@@ -30,10 +38,12 @@ TODO:
 # send external trigger
 
 1. get ID from bot chat
-2. edit name of trigger (EXTERNAL_<trigger_name> and entities involved for slots + actions)
+2. edit name of trigger (EXTERNAL\_<trigger_name> and entities involved for slots + actions)
 
 ```bash
 curl -H "Content-Type: application/json" -X POST -d \
 '{"name": "EXTERNAL_dry_plant", "entities": {"plant": "Orchid"}}' \
 "http://localhost:5005/conversations/<CONVERSATION_ID_FROM_BOT>/trigger_intent?output_channel=latest"
 ```
+
+**_callback server only used for recieving messages from CURL like when posting External Events_**
