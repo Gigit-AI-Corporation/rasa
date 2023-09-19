@@ -9,3 +9,5 @@ rasa interactive
 
 openai flow: 
 What can you help with?
+
+activate form by triggering intent: "ask me anything" or variations in that intent
