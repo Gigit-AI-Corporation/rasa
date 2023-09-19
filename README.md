@@ -19,7 +19,21 @@ pip3 install 'rasa[spacy]'
 python3 -m spacy download en_core_web_md
 ```
 
-TODO: 
+TODO:
+
 1. edit external trigger to activate a reminder instead of custom action
-  * scheduled reminders queue 
+
+- scheduled reminders queue
+
 2. this reminder waits for 4 seconds, then activates custom action to print response
+
+# send external trigger
+
+1. get ID from bot chat
+2. edit name of trigger (EXTERNAL_<trigger_name> and entities involved for slots + actions)
+
+```bash
+curl -H "Content-Type: application/json" -X POST -d \
+'{"name": "EXTERNAL_dry_plant", "entities": {"plant": "Orchid"}}' \
+"http://localhost:5005/conversations/<CONVERSATION_ID_FROM_BOT>/trigger_intent?output_channel=latest"
+```
