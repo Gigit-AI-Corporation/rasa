@@ -47,3 +47,17 @@ curl -H "Content-Type: application/json" -X POST -d \
 ```
 
 **_callback server only used for recieving messages from CURL like when posting External Events_**
+
+
+# Flow for triggering external reminder to call custom action
+* make sure uvloop installed for callback server
+```shell
+python callback_server.py
+rasa run actions
+rasa run --enable-api
+curl -XPOST http://localhost:5005/webhooks/callback/webhook \
+   -d '{"sender": "tester", "message": "remind me to call Brands!"}' \
+   -H "Content-type: application/json"
+```
+
+no chat through chat, but sending message to bot via webhook in curl request abd *message* param in JSON payload
