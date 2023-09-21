@@ -10,6 +10,12 @@ intents:
 - ask_remind_call
 - bot_challenge
 - deny
+- faq:
+    used_entities:
+    - PERSON
+    - plant
+    - shirt_size
+    is_retrieval_intent: true
 - give_shirt_size
 - give_time
 - goodbye
@@ -47,9 +53,9 @@ forms:
     required_slots:
     - shirt_size
 actions:
+- utter_welcome
 - utter_classes_info_1
 - utter_classes_info_3
-- utter_welcome
 - utter_classes_info_2
 - action_warn_dry
 - action_tell_id
@@ -60,6 +66,7 @@ actions:
 - action_set_reminder
 - action_forget_reminders
 - action_react_to_reminder
+- utter_faq
 responses:
   utter_greet:
   - text: Hey! How are you?

@@ -5,6 +5,10 @@ rules:
   #   steps:
   #     - intent: ask_remind_call
   #     - action: action_set_reminder
+  - rule: respond to FAQs
+    steps:
+      - intent: faq
+      - action: action_default_fallback
   - rule: Schedule a reminder
     steps:
       - intent: ask_remind_call

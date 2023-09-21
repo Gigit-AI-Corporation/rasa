@@ -154,3 +154,12 @@ nlu:
 - intent: EXTERNAL_dry_plant
   examples: |
     - EXTERNAL: EXTERNAL_dry_plant
+- intent: faq/ask_pricing
+  examples: |
+    - how much is the price of plan A?
+    - how much?
+    - how do I pay?
+    - is the free trial free?
+- intent: faq
+  examples: |
+    - how much?

@@ -47,3 +47,12 @@ stories:
     - action: utter_classes_info_2
     - intent: affirm
     - action: utter_classes_info_3
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: affirm
+  - action: utter_classes_info_1
+  - intent: faq
+  - action: action_default_fallback

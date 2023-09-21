@@ -45,7 +45,7 @@ class ActionDefaultFallback(Action):
                     "role": "system",
                     "content": "Act as a customer support representative. You help to solve user queries",
                 },
-                {"role": "user", "content": "You: " + user_message},
+                {"role": "user", "content": user_message},
             ],
             "max_tokens": 100,
         }
