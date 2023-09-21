@@ -1,11 +1,11 @@
 version: '3.1'
 
 stories:
-  - story: Happy path
-    steps:
-      - intent: greet
-      - intent: ask_remind_call
-      - action: action_set_reminder
+  # - story: Happy path
+  #   steps:
+  #     - intent: greet
+  #     - intent: ask_remind_call
+  #     - action: action_set_reminder
 
   - story: interactive_story_1
     steps:
@@ -35,3 +35,15 @@ stories:
       - slot_was_set:
           - plant: Orchid
       - action: action_warn_dry
+
+# most common, send hello and acknowledge want to know more about classes
+  - story: welcome user and nurture lead flow
+    steps:
+    - intent: greet
+    - action: utter_welcome
+    - intent: affirm
+    - action: utter_classes_info_1
+    - intent: affirm
+    - action: utter_classes_info_2
+    - intent: affirm
+    - action: utter_classes_info_3

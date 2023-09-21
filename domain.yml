@@ -47,6 +47,10 @@ forms:
     required_slots:
     - shirt_size
 actions:
+- utter_classes_info_1
+- utter_classes_info_3
+- utter_welcome
+- utter_classes_info_2
 - action_warn_dry
 - action_tell_id
 - action_say_shirt_size
@@ -78,6 +82,14 @@ responses:
   - text: '{message}'
   utter_warn_dry:
   - text: Your {plant} needs some water!
+  utter_welcome:
+  - text: welcome! would you like to try our classes?
+  utter_classes_info_1:
+  - text: we have classes for math and science, for ages between 5 and 18. would you like to find out more about our classes?
+  utter_classes_info_2:
+  - text: for math we cover topics like Geometry and Calculus. For Science, we cover physics and biology, want to find out more about our pricing?
+  utter_classes_info_3:
+  - text: we offer three pricing packages with money back guarantee. Would you like to try our 1 month trial at a discount?
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

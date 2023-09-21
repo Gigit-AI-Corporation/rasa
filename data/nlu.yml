@@ -35,6 +35,10 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - es
+    - ok
+    - k
+    - yup
 - intent: deny
   examples: |
     - no
@@ -44,6 +48,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nah
 - intent: mood_great
   examples: |
     - perfect
