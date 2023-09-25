@@ -48,9 +48,10 @@ curl -H "Content-Type: application/json" -X POST -d \
 
 **_callback server only used for recieving messages from CURL like when posting External Events_**
 
-
 # Flow for triggering external reminder to call custom action
-* make sure uvloop installed for callback server
+
+- make sure uvloop installed for callback server
+
 ```shell
 python callback_server.py
 rasa run actions
@@ -60,10 +61,25 @@ curl -XPOST http://localhost:5005/webhooks/callback/webhook \
    -H "Content-type: application/json"
 ```
 
-no chat through chat, but sending message to bot via webhook in curl request abd *message* param in JSON payload
+no chat through chat, but sending message to bot via webhook in curl request abd _message_ param in JSON payload
 
 # Running Docker container locally
+
 ```bash
 docker run -it -p 8080:8080 ogbrand25/rasa-demo
 docker run -it ogbrand25/rasa-demo shell
+```
+
+* because declared this in Dockerfile, everytime image is called as in above command, the below commands are ran as though called manually: rasa run --enable-api --port 8080:
+
+ENTRYPOINT [ "rasa" ]
+
+CMD [ "run", "--enable-api", "--port", "8080" ]
+
+## attach local volume and run remote docker container
+
+- pwd attaches local dir as volume (filesystem) so can access locally trained model
+
+```bash
+docker run -it -p 8080:8080 -v $(pwd):/app rasa/rasa:3.6.9-full run --enable-api --port 8080
 ```
