@@ -61,3 +61,9 @@ curl -XPOST http://localhost:5005/webhooks/callback/webhook \
 ```
 
 no chat through chat, but sending message to bot via webhook in curl request abd *message* param in JSON payload
+
+# Running Docker container locally
+```bash
+docker run -it -p 8080:8080 ogbrand25/rasa-demo
+docker run -it ogbrand25/rasa-demo shell
+```

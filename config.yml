@@ -11,10 +11,11 @@ assistant_id: 20230915-170650-rigid-adventure
 language: en
 
 pipeline:
-  - name: SpacyNLP
-    model: 'en_core_web_md'
-  - name: SpacyEntityExtractor
-    dimensions: ['PERSON']
+  # activate this again for using PERSON slot
+  # - name: SpacyNLP
+  #   model: 'en_core_web_md'
+  # - name: SpacyEntityExtractor
+  #   dimensions: ['PERSON']
   # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
   # # If you'd like to customize it, uncomment and adjust the pipeline.
   # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
