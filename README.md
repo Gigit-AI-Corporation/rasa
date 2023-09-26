@@ -83,3 +83,18 @@ CMD [ "run", "--enable-api", "--port", "8080" ]
 ```bash
 docker run -it -p 8080:8080 -v $(pwd):/app rasa/rasa:3.6.9-full run --enable-api --port 8080
 ```
+
+# Deploying to GKE
+1. spun up GKE autopilot cluster
+2. git clone this repo into cloud shell
+3. kubectl apply -f manifest.yaml
+4. kubectl rasa port-forward svc.rasa-web 8080:8080
+5. get EXTNERAL-IP from LB svc and query http://34.101.211.39:8080/model/parse
+
+NAME                                     READY   STATUS              RESTARTS   AGE
+pod/rasa-custom-model-5c7b65664f-jft68   0/1     ContainerCreating   0          79s
+pod/rasa-custom-model-5c7b65664f-p2qdl   0/1     ContainerCreating   0          79s
+
+NAME                 TYPE           CLUSTER-IP       EXTERNAL-IP     PORT(S)          AGE
+service/kubernetes   ClusterIP      34.118.224.1     <none>          443/TCP          114m
+service/rasa-web     LoadBalancer   34.118.227.143   34.101.211.39   8080:32200/TCP   81s
