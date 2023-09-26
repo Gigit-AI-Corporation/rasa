@@ -79,6 +79,7 @@ CMD [ "run", "--enable-api", "--port", "8080" ]
 ## attach local volume and run remote docker container
 
 - pwd attaches local dir as volume (filesystem) so can access locally trained model
+- this pulls official docker container from rasa instead of fiddly self-defined Dockerfile that we pushed as rasa-demo to personal dockerhub
 
 ```bash
 docker run -it -p 8080:8080 -v $(pwd):/app rasa/rasa:3.6.9-full run --enable-api --port 8080
@@ -87,7 +88,7 @@ docker run -it -p 8080:8080 -v $(pwd):/app rasa/rasa:3.6.9-full run --enable-api
 # Deploying to GKE
 1. spun up GKE autopilot cluster
 2. git clone this repo into cloud shell
-3. kubectl apply -f manifest.yaml
+3. kubectl apply -f manifest.yaml (applies outer Dockerfile again with new configs)
 4. kubectl rasa port-forward svc.rasa-web 8080:8080
 5. get EXTNERAL-IP from LB svc and query http://34.101.211.39:8080/model/parse
 
