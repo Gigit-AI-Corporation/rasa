@@ -62,10 +62,12 @@ stories:
     - intent: faq
     - action: utter_gpt
 
-  - story: interactive_story_1
+  - story: out-of-scope
     steps:
-    - intent: faq
-    - action: utter_gpt
-    - intent: faq
-    - action: utter_gpt
-    - intent: faq
+    - intent: out_of_scope
+    - action: utter_out_of_scope
+
+- story: interactive_story_1
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope

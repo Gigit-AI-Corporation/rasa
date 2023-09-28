@@ -22,6 +22,7 @@ intents:
 - greet
 - mood_great
 - mood_unhappy
+- out_of_scope
 - repeat_shirt_size
 entities:
 - plant
@@ -53,6 +54,7 @@ forms:
     required_slots:
     - shirt_size
 actions:
+- utter_out_of_scope
 - utter_gpt
 - utter_welcome
 - utter_classes_info_1
@@ -69,6 +71,8 @@ actions:
 - action_react_to_reminder
 - utter_faq
 responses:
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request. Can you try rephrasing your question?
   utter_gpt:
   - text: faq
   utter_greet:
