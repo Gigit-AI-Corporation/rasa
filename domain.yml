@@ -53,6 +53,7 @@ forms:
     required_slots:
     - shirt_size
 actions:
+- utter_gpt
 - utter_welcome
 - utter_classes_info_1
 - utter_classes_info_3
@@ -68,6 +69,8 @@ actions:
 - action_react_to_reminder
 - utter_faq
 responses:
+  utter_gpt:
+  - text: faq
   utter_greet:
   - text: Hey! How are you?
   utter_cheer_up:

@@ -48,11 +48,24 @@ stories:
     - intent: affirm
     - action: utter_classes_info_3
 
-  - story: interactive_story_1
+  - story: ask question midway through
     steps:
     - intent: greet
     - action: utter_welcome
     - intent: affirm
     - action: utter_classes_info_1
     - intent: faq
-    - action: action_default_fallback
+    - action: utter_gpt
+  
+  - story: ask question straight
+    steps:
+    - intent: faq
+    - action: utter_gpt
+
+  - story: interactive_story_1
+    steps:
+    - intent: faq
+    - action: utter_gpt
+    - intent: faq
+    - action: utter_gpt
+    - intent: faq

@@ -162,4 +162,11 @@ nlu:
     - is the free trial free?
 - intent: faq
   examples: |
+    - how much
     - how much?
+    - is there a free trial I can sign up for?
+    - is there a free trial?
+    - is there a free trial
+    - can you teach 1 to 1?
+    - do you offer 1 to 1 classes?
+    - can u do 1on1
