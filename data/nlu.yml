@@ -125,7 +125,7 @@ nlu:
   examples: |
     - [brandon ong](full_name)
     - my name is [koh sq](full_name)
-    - [brandon ong](full_name)
+    - [brandon](full_name)
 - intent: give_grade_level
   examples: |
     - [5](grade_level)
@@ -135,6 +135,9 @@ nlu:
   examples: |
     - [math](subject)
     - [math](subject)
+- intent: give_trial_time_slot
+  examples: |
+    - [25 Sep 230PM](trial_time_slot)
 - intent: ask_remind_call
   examples: |
     - remind me to call John
