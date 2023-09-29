@@ -4,3 +4,4 @@ models
 __pycache__
 .vscode
 rvenv
+.DS_Store
