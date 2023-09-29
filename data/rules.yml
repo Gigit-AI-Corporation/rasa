@@ -59,3 +59,19 @@ rules:
           - requested_slot: null
       - action: utter_remember
       - action: action_say_shirt_size
+  
+  - rule: Activate trial sign up form
+    steps:
+      - intent: trial_sign_up
+      - action: trial_sign_up_form
+      - active_loop: trial_sign_up_form
+
+  - rule: Submit form
+    condition:
+      - active_loop: trial_sign_up_form
+    steps:
+      - action: trial_sign_up_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_send_schedule

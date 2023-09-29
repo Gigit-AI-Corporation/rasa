@@ -121,6 +121,20 @@ nlu:
     - give shirt size
     - i want a [large](shirt_size) shirt please
     - i want to give you my shirt
+- intent: give_full_name
+  examples: |
+    - [brandon ong](full_name)
+    - my name is [koh sq](full_name)
+    - [brandon ong](full_name)
+- intent: give_grade_level
+  examples: |
+    - [5](grade_level)
+    - [five](grade_level)
+    - [5](grade_level)
+- intent: give_subject
+  examples: |
+    - [math](subject)
+    - [math](subject)
 - intent: ask_remind_call
   examples: |
     - remind me to call John
@@ -176,3 +190,6 @@ nlu:
     - What is 2 + 2?
     - Who's the US President?
     - i want to order food
+- intent: trial_sign_up
+  examples: |
+    - sign up for trial

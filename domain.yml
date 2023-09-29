@@ -24,11 +24,33 @@ intents:
 - mood_unhappy
 - out_of_scope
 - repeat_shirt_size
+- trial_sign_up
+- give_full_name
+- give_grade_level
+- give_subject
 entities:
 - plant
 - shirt_size
+- grade_level
+- full_name
+- subject
 - PERSON
 slots:
+  full_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: full_name
+  grade_level:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: grade_level
+  subject:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: subject
   shirt_size:
     type: text
     influence_conversation: true
@@ -53,6 +75,13 @@ forms:
   shirt_size_form:
     required_slots:
     - shirt_size
+  trial_sign_up_form:
+    ignored_intents: 
+      - chitchat
+    required_slots:
+    - full_name
+    - grade_level
+    - subject
 actions:
 - utter_out_of_scope
 - utter_gpt
@@ -70,7 +99,17 @@ actions:
 - action_forget_reminders
 - action_react_to_reminder
 - utter_faq
+- utter_send_schedule
 responses:
+  utter_ask_trial_sign_up_form_full_name:
+  - text: "what's ur full name?"
+  utter_ask_trial_sign_up_form_grade_level:
+  - text: "what's ur child's grade level?"
+  utter_ask_trial_sign_up_form_subject:
+  - text: "what's subject would you like to try?"
+  utter_send_schedule:
+  - text: 'thanks for providing your details! now select which time slot you want! here is the schedule for grade 5 math:'
+    image: https://i.imgur.com/1938Z2y.jpg
   utter_out_of_scope:
   - text: Sorry, I can't handle that request. Can you try rephrasing your question?
   utter_gpt:

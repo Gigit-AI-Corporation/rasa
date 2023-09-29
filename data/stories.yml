@@ -66,8 +66,36 @@ stories:
     steps:
     - intent: out_of_scope
     - action: utter_out_of_scope
-
-- story: interactive_story_1
-  steps:
-  - intent: out_of_scope
-  - action: utter_out_of_scope
+  - story: interactive_story_1
+    steps:
+    - intent: trial_sign_up
+    - action: trial_sign_up_form
+    - active_loop: trial_sign_up_form
+    - slot_was_set:
+      - requested_slot: full_name
+    - intent: give_full_name
+      entities:
+      - full_name: brandon ong
+    - slot_was_set:
+      - full_name: brandon ong
+    - action: trial_sign_up_form
+    - slot_was_set:
+      - requested_slot: grade_level
+    - intent: give_grade_level
+      entities:
+      - grade_level: '5'
+    - slot_was_set:
+      - grade_level: '5'
+    - action: trial_sign_up_form
+    - slot_was_set:
+      - requested_slot: subject
+    - intent: give_subject
+      entities:
+      - subject: math
+    - slot_was_set:
+      - subject: math
+    - action: trial_sign_up_form
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: utter_send_schedule

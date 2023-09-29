@@ -45,7 +45,8 @@ policies:
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
 #   - name: MemoizationPolicy
-#   - name: RulePolicy
+# rule policy used for Form Slot filling
+  - name: RulePolicy
 #   - name: UnexpecTEDIntentPolicy
 #     max_history: 5
 #     epochs: 100
@@ -65,7 +66,7 @@ policies:
   #     max_history: 5
   #     epochs: 100
   #     constrain_similarities: true
-  null
+  # null
   # - name: RulePolicy
   #   core_fallback_threshold: 0.4
   #   core_fallback_action_name: 'action_default_fallback'
