@@ -118,7 +118,7 @@ responses:
   - text: what's subject would you like to try?
   utter_ask_trial_sign_up_form_trial_time_slot:
   - text: 'thanks for providing your details! now select which time slot you want! here is the schedule for grade 5 math:'
-    image: https://i.imgur.com/1938Z2y.jpg
+    image: https://gigit-ai-internal-tools.s3.ap-southeast-1.amazonaws.com/Slots+Math.jpg
   utter_trial_scheduled:
   - text: thanks for signing up! we will send you a reminder on {trial_time_slot}!
   utter_out_of_scope:
