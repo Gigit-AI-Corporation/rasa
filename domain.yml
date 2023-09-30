@@ -147,7 +147,7 @@ responses:
   utter_warn_dry:
   - text: Your {plant} needs some water!
   utter_welcome:
-  - text: welcome! would you like to try our classes?
+  - text: welcome! can i tell you more about our classes? when you're ready, we can sign you up for a trial~
   utter_classes_info_1:
   - text: we have classes for math and science, for ages between 5 and 18. would you like to find out more about our classes?
   utter_classes_info_2:
