@@ -41,6 +41,11 @@ stories:
     steps:
     - intent: greet
     - action: utter_welcome
+    - checkpoint: nurture_lead
+
+  - story: nurture lead flow
+    steps:
+    - checkpoint: nurture_lead
     - intent: affirm
     - action: utter_classes_info_1
     - intent: affirm
@@ -50,8 +55,7 @@ stories:
 
   - story: ask question midway through
     steps:
-    - intent: greet
-    - action: utter_welcome
+    - checkpoint: nurture_lead
     - intent: affirm
     - action: utter_classes_info_1
     - intent: faq
