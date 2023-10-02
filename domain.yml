@@ -92,11 +92,11 @@ forms:
     - subject
     - trial_time_slot
 actions:
+- utter_classes_info_2
 - utter_welcome
 - utter_classes_info_3
-- utter_gpt
-- utter_classes_info_2
 - utter_classes_info_1
+- utter_gpt
 - utter_trial_scheduled
 - utter_out_of_scope
 - action_warn_dry

@@ -39,6 +39,7 @@ nlu:
     - ok
     - k
     - yup
+    - boleh
 - intent: deny
   examples: |
     - no
