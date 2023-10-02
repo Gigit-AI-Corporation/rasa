@@ -6,13 +6,17 @@ rules:
     steps:
       - intent: greet
       - action: utter_welcome
-  - rule: out-of-scope
+  # - rule: out-of-scope
+  #   steps:
+  #     - intent: out_of_scope
+  #     - action: utter_out_of_scope
+  # - rule: respond to FAQs
+  #   steps:
+  #     - intent: faq
+  #     - action: utter_gpt
+  - rule: answer all out of control qns as faq
     steps:
-      - intent: out_of_scope
-      - action: utter_out_of_scope
-  - rule: respond to FAQs
-    steps:
-      - intent: faq
+      - intent: nlu_fallback
       - action: utter_gpt
   - rule: Schedule a reminder
     steps:

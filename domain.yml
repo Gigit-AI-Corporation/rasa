@@ -26,6 +26,7 @@ intents:
 - greet
 - mood_great
 - mood_unhappy
+- nlu_fallback
 - out_of_scope
 - repeat_shirt_size
 - trial_sign_up
@@ -91,9 +92,9 @@ forms:
     - subject
     - trial_time_slot
 actions:
+- utter_gpt
 - utter_trial_scheduled
 - utter_out_of_scope
-- utter_gpt
 - utter_welcome
 - utter_classes_info_1
 - utter_classes_info_3

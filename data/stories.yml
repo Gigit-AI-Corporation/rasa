@@ -53,23 +53,23 @@ stories:
     - intent: affirm
     - action: utter_classes_info_3
 
-  - story: ask question midway through
-    steps:
-    - checkpoint: nurture_lead
-    - intent: affirm
-    - action: utter_classes_info_1
-    - intent: faq
-    - action: utter_gpt
+  # - story: ask question midway through
+  #   steps:
+  #   - checkpoint: nurture_lead
+  #   - intent: affirm
+  #   - action: utter_classes_info_1
+  #   - intent: faq
+  #   - action: utter_gpt
   
-  - story: ask question straight
-    steps:
-    - intent: faq
-    - action: utter_gpt
+  # - story: ask question straight
+  #   steps:
+  #   - intent: faq
+  #   - action: utter_gpt
 
-  - story: out-of-scope
-    steps:
-    - intent: out_of_scope
-    - action: utter_out_of_scope
+  # - story: out-of-scope
+  #   steps:
+  #   - intent: out_of_scope
+  #   - action: utter_out_of_scope
   - story: full trial sign up form flow
     steps:
     - intent: trial_sign_up

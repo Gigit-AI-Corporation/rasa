@@ -130,10 +130,8 @@ nlu:
   examples: |
     - [5](grade_level)
     - [five](grade_level)
-    - [5](grade_level)
 - intent: give_subject
   examples: |
-    - [math](subject)
     - [math](subject)
 - intent: give_trial_time_slot
   examples: |
@@ -171,28 +169,10 @@ nlu:
 - intent: EXTERNAL_dry_plant
   examples: |
     - EXTERNAL: EXTERNAL_dry_plant
-- intent: faq/ask_pricing
-  examples: |
-    - how much is the price of plan A?
-    - how much?
-    - how do I pay?
-    - is the free trial free?
-- intent: faq
-  examples: |
-    - how much
-    - how much?
-    - is there a free trial I can sign up for?
-    - is there a free trial?
-    - is there a free trial
-    - can you teach 1 to 1?
-    - do you offer 1 to 1 classes?
-    - can u do 1on1
-- intent: out_of_scope
-  examples: |
-    - I want to order food
-    - What is 2 + 2?
-    - Who's the US President?
-    - i want to order food
 - intent: trial_sign_up
   examples: |
     - sign up for trial
+- intent: nlu_fallback
+  examples: |
+    - Mau nanya kak, di PT X, apa sudah memiliki asuransi kesehatan?
+    - pakah asuransi kesehatannya tsb sudah termasuk telemedicine supaya lebih mempermudahkan karyawan bila sakit?
