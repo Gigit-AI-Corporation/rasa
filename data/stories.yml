@@ -48,10 +48,12 @@ stories:
     - checkpoint: nurture_lead
     - intent: affirm
     - action: utter_classes_info_1
-    - intent: affirm
+    - intent: deny
     - action: utter_classes_info_2
     - intent: affirm
     - action: utter_classes_info_3
+    - intent: nlu_fallback
+    - action: utter_gpt
 
   # - story: ask question midway through
   #   steps:
@@ -115,3 +117,22 @@ stories:
       - requested_slot: null
     - active_loop: null
     - action: utter_trial_scheduled
+
+  - story: nurture lead to faq 
+    steps:
+    - intent: greet
+    - action: utter_welcome
+    - intent: deny
+    - intent: affirm
+    - action: utter_classes_info_1
+    - intent: deny
+    - action: utter_classes_info_2
+    - intent: affirm
+    - action: utter_classes_info_3
+    - intent: give_full_name
+      entities:
+      - full_name: brandon
+    - slot_was_set:
+      - full_name: brandon
+    - intent: nlu_fallback
+    - action: utter_gpt

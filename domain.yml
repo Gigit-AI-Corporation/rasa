@@ -92,13 +92,13 @@ forms:
     - subject
     - trial_time_slot
 actions:
+- utter_welcome
+- utter_classes_info_3
 - utter_gpt
+- utter_classes_info_2
+- utter_classes_info_1
 - utter_trial_scheduled
 - utter_out_of_scope
-- utter_welcome
-- utter_classes_info_1
-- utter_classes_info_3
-- utter_classes_info_2
 - action_warn_dry
 - action_tell_id
 - action_say_shirt_size
@@ -148,13 +148,13 @@ responses:
   utter_warn_dry:
   - text: Your {plant} needs some water!
   utter_welcome:
-  - text: welcome! can i tell you more about our classes? when you're ready, we can sign you up for a trial~
+  - text: Selamat datang di Good Doctor, layanan telemedicine terdepan di Indonesia! Sebelum kami memulai, izin bertanya, di perusahaan bapak/ibu apa sudah memiliki asuransi kesehatan?
   utter_classes_info_1:
-  - text: we have classes for math and science, for ages between 5 and 18. would you like to find out more about our classes?
+  - text: Apakah di asuransi tsb sudah memberikan akses ke online telemedicine?
   utter_classes_info_2:
-  - text: for math we cover topics like Geometry and Calculus. For Science, we cover physics and biology, want to find out more about our pricing?
+  - text: Baik, kalau belum, boleh saya izin menjelaskan tentang program Good Doctor for Enterprise?
   utter_classes_info_3:
-  - text: we offer three pricing packages with money back guarantee. Would you like to try our 1 month trial at a discount?
+  - text: 'Di Good Doctor, kami menyediakan 3 program layananan kesehatan: Bronze, Silver dan Gold, dengan harga antara 100.000 IDR/pax - 250.000 IDR/pax, dengan cakupan layanan konsultasi tanpa batas, dan pengantaran obat ke rumah karyawan. Apakah tertarik?'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

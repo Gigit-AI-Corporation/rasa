@@ -49,6 +49,9 @@ nlu:
     - no way
     - not really
     - nah
+    - tidak
+    - nggak
+    - tiddak
 - intent: mood_great
   examples: |
     - perfect
@@ -176,3 +179,4 @@ nlu:
   examples: |
     - Mau nanya kak, di PT X, apa sudah memiliki asuransi kesehatan?
     - pakah asuransi kesehatannya tsb sudah termasuk telemedicine supaya lebih mempermudahkan karyawan bila sakit?
+    - how do u sell?
